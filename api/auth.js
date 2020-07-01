@@ -27,11 +27,11 @@ export function login(code, userInfo) {
 export function logout() {
     if (getApp().globalData.userInfo) {
         getApp().globalData.userInfo = '';
-        wx.reLaunch({
+        qq.reLaunch({
             url: '/pages/index/index'
         })
     } else {
-        wx.showToast({
+        qq.showToast({
             title: '注销失败!',
             icon: 'warn',
             duration: 1000,
